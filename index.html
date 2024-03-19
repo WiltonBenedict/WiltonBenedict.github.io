@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda Deportiva</title>
+    <!-- Referencia al CDN de BootStrap del https://getbootstrap.com/docs/5.3/getting-started/download/-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="stylesheet" href="CSS/magnify.css" />
+  </head>
+  <body>
+    <!--HEADER-->
+
+    <div class="header" id="hide">
+      <img src="IMG/Logo3.png" class="responsive" />
+    </div>
+
+    <!--NAV -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Inicio</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="equipo.html">Equipo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="vestimenta.html">Vestimenta</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tecnologia.html">Tecnologia</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--CAROUSEL-->
+    <div
+      id="carousel"
+      class="carousel slide"
+      data-bs-ride="carousel"
+      style="width: 50%; height: 50%; margin-left: auto; margin-right: auto"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+          <img src="IMG/WP1.jpg" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+          <img src="IMG/WP2.png" class="d-block w-100" alt="..." />
+        </div>
+        <div class="carousel-item">
+          <img src="IMG/WP3.png" class="d-block w-100" alt="..." />
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#carousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#carousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- OFERTAS-->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <h3 class="animate-charcter"> OFERTAS</h3>
+        </div>
+      </div>
+    </div>
+
+    <!--CARD GROUP-->
+    <div class="card-group">
+      <div class="card">
+        <img src="IMG/OFR1.png" class="card-img-top" alt="..." />
+        <div class="card-body" style="text-align: center">
+          <h5 class="card-title">Smartwatch Approach S70</h5>
+          <p class="card-text">Costo: 460,500 CRC</p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#Modal1"
+          >
+            Comprar
+          </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary"
+            >Oferta termina en: <span id="reloj1"></span
+          ></small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG/OFR2.png" class="card-img-top" alt="..." />
+        <div class="card-body" style="text-align: center">
+          <h5 class="card-title">Set de Obstáculos de Velocidad</h5>
+          <p class="card-text">Costo: 105,900 CRC</p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#Modal2"
+          >
+            Comprar
+          </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary"
+            >Oferta termina en: <span id="reloj2"></span
+          ></small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG/OFR3.png" class="card-img-top" alt="..." />
+        <div class="card-body" style="text-align: center">
+          <h5 class="card-title">
+            6fit Cuerda de Ejercicios para Batir, 15 Metros
+          </h5>
+          <p class="card-text">Costo: 85,200 CRC</p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#Modal3"
+          >
+            Comprar
+          </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary"
+            >Oferta termina en: <span id="reloj3"></span
+          ></small>
+        </div>
+      </div>
+    </div>
+
+    <!-- NUEVOS ARTICULOS -->
+    <div class="container responsive">
+      <div class="row">
+        <div class="col-md-12 text-center responsive">
+          <h3 class="animate-charcter"> NUEVOS ARTICULOS</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-group">
+      <div class="card">
+        <img src="IMG/rack pesas.png" class="card-img-top" alt="..." />
+        <div class="card-body" style="text-align: center">
+          <h5 class="card-title">Rack deportivo</h5>
+          <p class="card-text">Costo: 295,000 CRC</p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#Modal4"
+          >
+            Comprar
+          </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary"></small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG/rodilleras4.png" class="card-img-top" alt="..." />
+        <div class="card-body" style="text-align: center">
+          <h5 class="card-title">Rodilleras</h5>
+          <p class="card-text">Costo: 15,000 CRC </p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#Modal5"
+          >
+            Comprar
+          </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary"></small>
+        </div>
+      </div>
+      <div class="card">
+        <img src="IMG/rodillo abdominal.webp" class="card-img-top" alt="..." />
+        <div class="card-body" style="text-align: center">
+          <h5 class="card-title">Rodillo abdominal</h5>
+          <p class="card-text">Costo: 17,000 CRC </p>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#Modal6"
+          >
+            Comprar
+          </button>
+        </div>
+        <div class="card-footer">
+          <small class="text-body-secondary"></small>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--FOOTER-->
+    <footer class="bg-body-tertiary text-center text-lg-start">
+      <!-- Grid container -->
+      <div class="container p-4">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">recomendaciones:</h5>
+
+            <iframe
+              width="420"
+              height="315"
+              src="https://www.youtube.com/embed/gp1DcvVtyf4?si=_JQ7qVs5XQ-VNvhB"
+            >
+            </iframe>
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Grupo 4</h5>
+
+            <p>Integrantes: Saymond Vargas Cordero
+            </p>
+            <p>Anthony Vásquez Rojas </p>
+            <p>              Maria Jose Rodríguez Araya</p>
+            <p>              Wilton Benedict Castillo
+            </p>
+            <p> Westley Levey Murillo<</p>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+
+      <div
+        class="text-center p-3"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        2024, Programacion III, Proyecto No. I
+        <a class="text-body">Grupo 04</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+
+    <!--MODALS OFERTAS-->
+
+    <!-- Producto 01 -->
+    <div
+      class="modal fade"
+      id="Modal1"
+      tabindex="-1"
+      aria-labelledby="Modal1"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Modal1">Smartwatch Approach S70</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <section class="layout">
+              <div style="height: 70%; width: 70%">
+                <div
+                  id="ModalCarousel"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a href="IMG/OFR1A.png">
+                        <img src="IMG/OFR1A.png" class="d-block w-100 zoom" />
+                      </a>
+                      <!-- <img src="IMG/OFR1A.png" class="d-block w-100 zoom" id="zoom" alt="..."> -->
+                    </div>
+                    <div class="carousel-item">
+                      <a href="IMG/OFR1B.png">
+                        <img src="IMG/OFR1B.png" class="d-block w-100 zoom" />
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="IMG/OFR1C.png">
+                        <img src="IMG/OFR1C.png" class="d-block w-100 zoom" />
+                      </a>
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#ModalCarousel"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#ModalCarousel"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+
+              <button onclick="toggleContent()" class="btn btn-light" id="zoom2"><img id="zoom" src="IMG/zoom.png" alt=""></button>
+
+              <div  id="toggleContent" style="height: 70%; width: 70%">
+                <p>Precio: 460,500 CRC</p>
+                <p>Disponibilidad: 6</p>
+                <p>Descripcion: Smartwatch especializado en golf.</p>
+              </div>
+            </section>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 02 -->
+    <div
+      class="modal fade"
+      id="Modal2"
+      tabindex="-1"
+      aria-labelledby="Modal2"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Modal2">
+              Set de Obstáculos de Velocidad
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <section class="layout">
+              <div style="height: 70%; width: 70%">
+                <div
+                  id="ModalCarousel2"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a href="IMG/OFR2A.png">
+                        <img src="IMG/OFR2A.png" class="d-block w-100 zoom" />
+                      </a>
+                      <!-- <img src="IMG/OFR1A.png" class="d-block w-100 zoom" id="zoom" alt="..."> -->
+                    </div>
+                    <div class="carousel-item">
+                      <a href="IMG/OFR2B.png">
+                        <img src="IMG/OFR2B.png" class="d-block w-100 zoom" />
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="IMG/OFR2C.png">
+                        <img src="IMG/OFR2C.png" class="d-block w-100 zoom" />
+                      </a>
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#ModalCarousel2"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#ModalCarousel2"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+              <button onclick="toggleContent()" class="btn btn-light" id="zoom2"><img id="zoom" src="IMG/zoom.png" alt=""></button>
+              <div style="height: 70%; width: 70%" id="toggleContent">
+                <p>Precio: 105,900 CRCC</p>
+                <p>Disponibilidad: 6</p>
+                <p>
+                  Descripcion: Cada obstáculo presenta una base altamente
+                  duradera, un diseño de perfil bajo para pies de todos los
+                  tamaños y una construcción innovadora con rebote.
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Producto 03 -->
+    <div
+      class="modal fade"
+      id="Modal3"
+      tabindex="-1"
+      aria-labelledby="Modal3"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="Modal3">
+              6fit Cuerda de Ejercicios para Batir, 15 Metros
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <section class="layout">
+              <div style="height: 70%; width: 70%">
+                <div
+                  id="ModalCarousel3"
+                  class="carousel slide"
+                  data-bs-ride="carousel"
+                >
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <a href="IMG/OFR3A.png">
+                        <img src="IMG/OFR3A.png" class="d-block w-100 zoom" />
+                      </a>
+                      <!-- <img src="IMG/OFR1A.png" class="d-block w-100 zoom" id="zoom" alt="..."> -->
+                    </div>
+                    <div class="carousel-item">
+                      <a href="IMG/OFR3B.png">
+                        <img src="IMG/OFR3B.png" class="d-block w-100 zoom" />
+                      </a>
+                    </div>
+                    <div class="carousel-item">
+                      <a href="IMG/OFR3C.png">
+                        <img src="IMG/OFR3C.png" class="d-block w-100 zoom" />
+                      </a>
+                    </div>
+                  </div>
+                  <button
+                    class="carousel-control-prev"
+                    type="button"
+                    data-bs-target="#ModalCarousel3"
+                    data-bs-slide="prev"
+                  >
+                    <span
+                      class="carousel-control-prev-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button
+                    class="carousel-control-next"
+                    type="button"
+                    data-bs-target="#ModalCarousel3"
+                    data-bs-slide="next"
+                  >
+                    <span
+                      class="carousel-control-next-icon"
+                      aria-hidden="true"
+                    ></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+                </div>
+              </div>
+              <button onclick="toggleContent()" class="btn btn-light" id="zoom2"><img id="zoom" src="IMG/zoom.png" alt=""></button>
+              <div id="toggleContent" style="height: 70%; width: 70%">
+                <p>Precio: 85,200 CRC CRC</p>
+                <p>Disponibilidad: 2</p>
+                <p>
+                  Descripcion: Cuerda de ejercicios para batir con agarres de
+                  goma en ambos extremos para una mejor sujeción y protección.
+                </p>
+              </div>
+            </section>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--MODALS NUEVOS PRODUCTOS-->
+
+  <!-- Producto 01 -->
+  <div
+  class="modal fade"
+  id="Modal4"
+  tabindex="-1"
+  aria-labelledby="Modal4"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="Modal4">Rack deportivo</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <section class="layout">
+          <div style="height: 70%; width: 70%">
+            <div
+              id="ModalCarousel4"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="IMG/rack deportivo1.png">
+                    <img src="IMG/rack deportivo1.png" class="d-block w-100 zoom" />
+                  </a>
+                  <!-- <img src="IMG/OFR1A.png" class="d-block w-100 zoom" id="zoom" alt="..."> -->
+                </div>
+                <div class="carousel-item">
+                  <a href="IMG/rack deportivo2.png">
+                    <img src="IMG/rack deportivo2.png" class="d-block w-100 zoom" />
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="IMG/rack deportivo3.png">
+                    <img src="IMG/rack deportivo3.png" class="d-block w-100 zoom" />
+                  </a>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#ModalCarousel4"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#ModalCarousel4"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <button onclick="toggleContent()" class="btn btn-light" id="zoom2"><img id="zoom" src="IMG/zoom.png" alt=""></button>
+          <div id="toggleContent" style="height: 70%; width: 70%">
+            <p>Precio: 295,000 </p>
+            <p>Disponibilidad: En tienda física </p>
+            <p>Descripcion: Rack con capacidad de 320 kg en peso. Hecho en hierro con gomas de hule para brindar mayor comodidad.</p>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Producto 02 -->
+<div
+  class="modal fade"
+  id="Modal5"
+  tabindex="-1"
+  aria-labelledby="Modal5"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="Modal5">Rodilleras Ocean Fitness FIT</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <section class="layout">
+          <div style="height: 70%; width: 70%">
+            <div
+              id="ModalCarousel5"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="IMG/rodilleras1.png">
+                    <img src="IMG/rodilleras1.png" class="d-block w-100 zoom" />
+                  </a>
+                  <!-- <img src="IMG/OFR1A.png" class="d-block w-100 zoom" id="zoom" alt="..."> -->
+                </div>
+                <div class="carousel-item">
+                  <a href="IMG/rodilleras2.png">
+                    <img src="IMG/rodilleras2.png" class="d-block w-100 zoom" />
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="IMG/rodilleras3.png">
+                    <img src="IMG/rodilleras3.png" class="d-block w-100 zoom" />
+                  </a>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#ModalCarousel5"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#ModalCarousel5"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <button onclick="toggleContent()" class="btn btn-light" id="zoom2"><img id="zoom" src="IMG/zoom.png" alt=""></button>
+          <div id="toggleContent"  style="height: 70%; width: 70%">
+            <p>Precio: 15,000 CRC </p>
+            <p>Disponibilidad: Disponible 5 unidades </p>
+            <p>Descripcion: Rodilleras con microfibra y textura 3D para proporcionar una mejor compresión de los tejidos y ofrecer mayor segurirar. Ideales para el cuido de la rodilla.</p>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Producto 03 -->
+<div
+  class="modal fade"
+  id="Modal6"
+  tabindex="-1"
+  aria-labelledby="Modal6"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="Modal6">Rodillo abdominal</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <section class="layout">
+          <div style="height: 70%; width: 70%">
+            <div
+              id="ModalCarousel6"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <a href="IMG/rodillo1.png">
+                    <img src="IMG/rodillo1.png" class="d-block w-100 zoom" />
+                  </a>
+                  <!-- <img src="IMG/OFR1A.png" class="d-block w-100 zoom" id="zoom" alt="..."> -->
+                </div>
+                <div class="carousel-item">
+                  <a href="IMG/rodillo2.png">
+                    <img src="IMG/rodillo2.png" class="d-block w-100 zoom" />
+                  </a>
+                </div>
+                <div class="carousel-item">
+                  <a href="IMG/rodillo3.png">
+                    <img src="IMG/rodillo3.png" class="d-block w-100 zoom" />
+                  </a>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#ModalCarousel6"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#ModalCarousel6"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <button onclick="toggleContent()" class="btn btn-light" id="zoom2"><img id="zoom" src="IMG/zoom.png" alt=""></button>
+          <div id="toggleContent" style="height: 70%; width: 70%">
+            <p>Precio: 17,000 CRC</p>
+            <p>Disponibilidad: 8 unidades </p>
+            <p>Descripcion: Rodillo abdominal ideal para el crecimiento y estimulación de los musculos abdominales,</p>
+          </div>
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- Referencia a script de JS, Bootstrap, jQuery-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="JS/jquery.magnify.js"></script>
+    <script src="JS/jquery.countdown.js"></script>
+    <script src="JS/JavaScript.js"></script>
+  </body>
+</html>
